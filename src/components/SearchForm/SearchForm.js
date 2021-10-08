@@ -4,17 +4,21 @@ import "./SearchForm.css";
 import { Flex } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 
-const API_KEY = "234ddc1c";
+const API_KEY = "234ddc1c"; // Create a const variable with the key from the API
 
 function SearchForm(props) {
 	const [inputMovie, setInput] = useState("");
 	const urlToFetch = `http://www.omdbapi.com/?apikey=${API_KEY}&`;
 	const PARAMETER = "s=";
+
 	function inputHandleChange(props) {
+		// This function set the state for the input state taken the value that
+		// the user write
 		setInput(props.target.value);
 	}
 
 	function handleSubmit(e) {
+		// This function uses the fetch to make a query to the api
 		e.preventDefault();
 
 		fetch(urlToFetch + PARAMETER + `${inputMovie}`)
