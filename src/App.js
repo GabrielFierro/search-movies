@@ -3,7 +3,7 @@ import Movie from "./components/Movie";
 import Title from "./components/Title";
 import SearchForm from "./components/SearchForm/SearchForm";
 import "./App.css";
-import { Box, Flex, Grid, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 function App() {
 	const [results, setResults] = useState([]);
