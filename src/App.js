@@ -12,7 +12,7 @@ function App() {
 	};
 
 	function renderResults() {
-		return results.map((movie, index) => {
+		return results.map((movie) => {
 			return (
 				<Flex key={movie.imdbID} flexWrap border="3px" borderColor="tomato	">
 					<Box w="400px" h="100%" mt={12} ml={12}>
