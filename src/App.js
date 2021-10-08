@@ -20,11 +20,6 @@ function App() {
 						<img alt={movie.Title} src={movie.Poster} w="300px" />
 					</Box>
 				</Flex>
-				/*
-				<p key={movie.imdbID} style={{ color: "white" }}>
-					{movie.Title}
-				</p>
-				*/
 			);
 		});
 	}
