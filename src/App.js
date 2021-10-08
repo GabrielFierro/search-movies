@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Movie from "./components/Movie";
 import Title from "./components/Title";
 import SearchForm from "./components/SearchForm/SearchForm";
 import "./App.css";
@@ -13,17 +14,9 @@ function App() {
 
 	function renderResults() {
 		return results.map((movie) => {
-			return (
-				<Flex key={movie.imdbID} flexWrap border="3px" borderColor="tomato	">
-					<Box w="400px" h="100%" mt={12} ml={12}>
-						<Text color="white">{movie.Title}</Text>
-						<img alt={movie.Title} src={movie.Poster} w="300px" />
-					</Box>
-				</Flex>
-			);
+			return <Movie movie={movie} key={movie.imdbID} />;
 		});
 	}
-
 	return (
 		<div className="App" bg="primary">
 			<Title>Search Movies</Title>
