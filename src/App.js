@@ -1,8 +1,11 @@
 import { useState } from "react";
+// Import for components
 import MoviesList from "./components/MoviesList";
 import Title from "./components/Title";
 import SearchForm from "./components/SearchForm/SearchForm";
+// Import for the CSS code
 import "./App.css";
+// Import for chakra-ui component
 import { Box } from "@chakra-ui/react";
 
 function App() {
