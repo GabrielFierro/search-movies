@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MoviesList from "./components/MoviesList";
 import Movie from "./components/Movie";
 import Title from "./components/Title";
 import SearchForm from "./components/SearchForm/SearchForm";
@@ -26,7 +27,7 @@ function App() {
 			{results.length === 0 ? (
 				<p style={{ color: "white", margin: "10px" }}>Sin resultados</p>
 			) : (
-				renderResults()
+				<MoviesList results={results} />
 			)}
 		</div>
 	);
