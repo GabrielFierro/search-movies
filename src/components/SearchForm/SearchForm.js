@@ -24,7 +24,7 @@ function SearchForm(props) {
 		fetch(urlToFetch + PARAMETER + `${inputMovie}`)
 			.then((response) => response.json())
 			.then((jsonResponse) => {
-				const { Search, totalResults } = jsonResponse;
+				const { Search = [], totalResults = "0" } = jsonResponse;
 				console.log({ Search, totalResults });
 				props.onResults(Search);
 			});
