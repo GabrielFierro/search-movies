@@ -25,7 +25,7 @@ function App() {
 			</Box>
 			{results.length === 0 ? (
 				<Text style={{ color: "white", margin: "10px" }}>
-					<Center>Sin resultados</Center>
+					<Center>No results. Try with another title</Center>
 				</Text>
 			) : (
 				<MoviesList results={results} />
