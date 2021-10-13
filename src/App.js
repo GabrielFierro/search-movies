@@ -1,6 +1,5 @@
 import { useState } from "react";
 import MoviesList from "./components/MoviesList";
-import Movie from "./components/Movie";
 import Title from "./components/Title";
 import SearchForm from "./components/SearchForm/SearchForm";
 import "./App.css";
