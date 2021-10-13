@@ -10,10 +10,22 @@ import { Box, Center, Text } from "@chakra-ui/react";
 
 function App() {
 	const [results, setResults] = useState([]);
+	const [useSearched, setUseSearched] = useState(false);
 
 	const handleResults = (results) => {
 		setResults(results);
+		setUseSearched(true);
 	};
+
+	function _renderResults() {
+		return results.length === 0 ? (
+			<Text style={{ color: "white", margin: "10px" }}>
+				<Center>Sorry! 😞 Results not found!</Center>
+			</Text>
+		) : (
+			<MoviesList results={results} />
+		);
+	}
 
 	return (
 		<div bg="primary">
@@ -23,12 +35,12 @@ function App() {
 			<Box display="flex" justifyContent="center" p={2}>
 				<SearchForm onResults={handleResults} />
 			</Box>
-			{results.length === 0 ? (
-				<Text style={{ color: "white", margin: "10px" }}>
-					<Center>No results. Try with another title</Center>
-				</Text>
+			{useSearched ? (
+				_renderResults()
 			) : (
-				<MoviesList results={results} />
+				<Center>
+					<Text style={{ color: "white" }}>Use the form to search a movie</Text>
+				</Center>
 			)}
 		</div>
 	);
