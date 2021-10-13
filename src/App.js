@@ -13,11 +13,6 @@ function App() {
 		setResults(results);
 	};
 
-	function renderResults() {
-		return results.map((movie) => {
-			return <Movie movie={movie} key={movie.imdbID} />;
-		});
-	}
 	return (
 		<div className="App" bg="primary">
 			<Title>Search Movies</Title>
