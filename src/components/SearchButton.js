@@ -4,7 +4,6 @@ function SearchForm({ children }) {
 	return (
 		<Button
 			mt="-4px"
-			ml="10px"
 			color="white"
 			bg="#db0000"
 			variant="solid"
