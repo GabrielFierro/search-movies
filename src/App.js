@@ -6,7 +6,7 @@ import SearchForm from "./components/SearchForm/SearchForm";
 // Import for the CSS code
 import "./App.css";
 // Import for chakra-ui component
-import { Box } from "@chakra-ui/react";
+import { Box, Center, Text } from "@chakra-ui/react";
 
 function App() {
 	const [results, setResults] = useState([]);
@@ -16,13 +16,17 @@ function App() {
 	};
 
 	return (
-		<div className="App" bg="primary">
-			<Title>Search Movies</Title>
-			<Box display="flex" justifyContent="center" p={1}>
+		<div bg="primary">
+			<Title>
+				<Center>Search Movies</Center>
+			</Title>
+			<Box display="flex" justifyContent="center" p={2}>
 				<SearchForm onResults={handleResults} />
 			</Box>
 			{results.length === 0 ? (
-				<p style={{ color: "white", margin: "10px" }}>Sin resultados</p>
+				<Text style={{ color: "white", margin: "10px" }}>
+					<Center>Sin resultados</Center>
+				</Text>
 			) : (
 				<MoviesList results={results} />
 			)}
