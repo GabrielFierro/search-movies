@@ -1,3 +1,4 @@
+import React from "react";
 import Movie from "./Movie.js";
 
 // This function return a component Movie with the props movie,
