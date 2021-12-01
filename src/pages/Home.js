@@ -19,7 +19,12 @@ export default function Home() {
 		return results.length === 0 ? (
 			<Text style={{ color: "white", margin: "10px" }}>
 				<Center>
-					Sorry! <span> 😞 </span>Results not found!
+					Sorry!{" "}
+					<span role="img" aria-label="sad">
+						{" "}
+						😞{" "}
+					</span>
+					Results not found!
 				</Center>
 			</Text>
 		) : (
