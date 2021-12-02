@@ -1,4 +1,6 @@
 import React from "react";
+// Import for the react router component
+import { Switch, Route } from "react-router-dom";
 // Import for the pages components
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
@@ -6,15 +8,14 @@ import Home from "./pages/Home";
 import "./App.css";
 
 function App() {
-	const url = new URL(document.location);
-	const hasId = url.searchParams.has("id");
-	const Page = url.searchParams.has("id") ? (
-		<Detail id={url.searchParams.get(hasId)} />
-	) : (
-		<Home />
+	return (
+		<div bg="primary">
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/detail/:id" component={Detail} />
+			</Switch>
+		</div>
 	);
-
-	return <div bg="primary">{Page}</div>;
 }
 
 export default App;
