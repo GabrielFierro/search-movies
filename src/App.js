@@ -1,5 +1,5 @@
 import React from "react";
-// Import for the pagesz
+// Import for the pages components
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 // Import for the CSS code
