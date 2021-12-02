@@ -1,5 +1,8 @@
 import React from "react";
+// Imports for the chakra ui components
 import { Box, Flex, Text } from "@chakra-ui/react";
+// Imports for the react router component
+import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => (
 	// This component display a box with the title, year and the poster
