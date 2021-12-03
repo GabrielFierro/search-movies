@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Movie = ({ movie }) => (
 	// This component display a box with the title, year and the poster
 	// of the searched movie
-	<a href={`?id=${movie.imdbID}`}>
+	<Link to={`/detail/${movie.imdbID}`}>
 		<Flex flexWrap border="3px" borderColor="tomato">
 			<Box w="400px" h="100%" my={8}>
 				<Text color="white">{movie.Title}</Text>
@@ -15,7 +15,7 @@ const Movie = ({ movie }) => (
 				<img alt={movie.Title} src={movie.Poster} w="300px" />
 			</Box>
 		</Flex>
-	</a>
+	</Link>
 );
 
 export default Movie;
