@@ -1,6 +1,6 @@
 import React from "react";
 // Import for the react router component
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // Import for the pages components
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
@@ -10,10 +10,10 @@ import "./App.css";
 function App() {
 	return (
 		<div bg="primary">
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route path="/detail/:id" component={Detail} />
-			</Switch>
+			<Routes>
+				<Route exact path="/" element={<Home />} />
+				<Route exact path="/detail/:id" element={Detail} />
+			</Routes>
 		</div>
 	);
 }
